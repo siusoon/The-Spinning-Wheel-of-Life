@@ -15,7 +15,7 @@ Carnivore Library: http://r-s-g.org/carnivore
 
 3/ Go to youtube and get a playlist (8 bits video: https://www.youtube.com/watch?v=dXb3XXi9Xww&list=PLzjkiYUjXuevVG0fTOX4GCTzbU0ooHQ-O&index=12)
 
-#configurable items
+#Configurable items
 1/ delay time
 
 2/ list of ip address that you want to track (youtube currently)
