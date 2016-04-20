@@ -21,3 +21,6 @@ Carnivore Library: http://r-s-g.org/carnivore
 2/ list of ip address that you want to track (youtube currently)
 
 3/ alpha -> the fade in/out speed
+
+#Tested configurations:
+- Processing 3.0 + Mac OS 10.10.5
