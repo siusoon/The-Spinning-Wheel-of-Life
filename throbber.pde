@@ -40,7 +40,7 @@ class Particle {
     size = 22;
     colorbuffer = color (240,240,240);
     
-    //transform of buffer dots start
+    //transformation of buffer start (in the form of ellipse)
     counter++; 
     println(counter + " packets: " + finalip);    
     //calculate the position of dots   
