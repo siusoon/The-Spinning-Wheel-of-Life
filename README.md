@@ -10,10 +10,14 @@ Carnivore Library: http://r-s-g.org/carnivore
 #Procedures
 1/ Settings on mac terminal: first open a Terminal and execute this commmand: sudo chmod 777 /dev/bpf* 
    (must be done each time you reboot your mac)
+   
 2/ Turn on Processing and run SpiningWheelofLife
+
 3/ Go to youtube and get a playlist (8 bits video: https://www.youtube.com/watch?v=dXb3XXi9Xww&list=PLzjkiYUjXuevVG0fTOX4GCTzbU0ooHQ-O&index=12)
 
 #configurable items
 1/ delay time
+
 2/ list of ip address that you want to track (youtube currently)
+
 3/ alpha -> the fade in/out speed
