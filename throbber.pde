@@ -38,7 +38,7 @@ class Particle {
     calpos = new PVector(0,35);   //initial position
     alpha = 255.0;
     size = 22;
-    colorbuffer = color (240,240,240);  //yellow
+    colorbuffer = color (240,240,240);
     
     //transform of buffer dots start
     counter++; 
