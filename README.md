@@ -1,0 +1,2 @@
+# The-Spinning-Wheel-of-Life
+The project challenges the perception of a throbber that is usually understood as a transitional object, waiting for content delivers on a screen. Forcing to focus on the spinning wheel with a networked music stream, the project asks: how might we engage with a throbber beyond the negative connotations of waitings, frustrations and annoyance in contemporary software culture? 
