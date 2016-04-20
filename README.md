@@ -16,11 +16,11 @@ Carnivore Library: http://r-s-g.org/carnivore
 3/ Go to youtube and get a playlist (8 bits video: https://www.youtube.com/watch?v=dXb3XXi9Xww&list=PLzjkiYUjXuevVG0fTOX4GCTzbU0ooHQ-O&index=12)
 
 #Configurable items
-1/ delay time
+1/ delay time via "frameRate"
 
 2/ list of ip address that you want to track (youtube currently)
 
-3/ alpha -> the fade in/out speed
+3/ alpha in throbber tab -> the fade in/out speed
 
 #Tested configurations
 - Processing 3.0 + Mac OS 10.10.5
