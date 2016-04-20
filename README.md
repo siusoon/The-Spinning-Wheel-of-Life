@@ -22,5 +22,5 @@ Carnivore Library: http://r-s-g.org/carnivore
 
 3/ alpha -> the fade in/out speed
 
-#Tested configurations:
+#Tested configurations
 - Processing 3.0 + Mac OS 10.10.5
