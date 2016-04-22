@@ -13,7 +13,7 @@ Carnivore Library: http://r-s-g.org/carnivore
    
 2/ Turn on Processing and run SpiningWheelofLife
 
-3/ Go to youtube and get a playlist (8 bits video: https://www.youtube.com/watch?v=dXb3XXi9Xww&list=PLzjkiYUjXuevVG0fTOX4GCTzbU0ooHQ-O&index=12)
+3/ Go to youtube and get a playlist (e.g 8 bits video game music: http://bit.ly/1ppETHQ)
 
 #Configurable items
 1/ delay time via "frameRate"
