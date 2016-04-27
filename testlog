@@ -1,10 +1,10 @@
 #27 Apr 2016 [Working on Pi - Model B+ technically]
-- With the latest Carnivore for ARM, it supports PI now: https://github.com/RSG/Carnivore
+- With the latest Carnivore for ARM, it supports PI now: https://github.com/RSG/Carnivore. Thx to RSG and Gottfried!
 - make sure it is root access (sudo processing or sudo ./processing > to run processing as root)
 * I also did a tcpdump update in Pi (get update and tcpdump) http://www.ronnutter.com/raspberry-pi-intro-to-tcpdump/
 > other fixes are required: the visual throbber seems a bit distored in PI interface
 >> next action: Get the Pi 3 with better CPU power and test again.
 
 #25 Apr 2016 [doesn't work with Pi because it is not 64-bit- library is not supported] 
-- Install processing in Raspberry Pi Model B (https://www.raspberrypi.org/blog/now-available-for-download-processing/)
+- Install processing in Raspberry Pi Model B+ (https://www.raspberrypi.org/blog/now-available-for-download-processing/)
 - In processing, add library > select Carnivore
