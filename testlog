@@ -1,6 +1,7 @@
-#28 Apr 2016 [Try ad blocking in Youtube]
+#28 Apr 2016 [Tried ad blocking in Youtube successfully]
 - Firefox addon: https://www.youtube.com/watch?v=oMgQJEcVToY&list=PLzjkiYUjXuevVG0fTOX4GCTzbU0ooHQ-O
 - remove interrupted video ad between videos in a playlist
+- Every time installing the work, it always need to adjust framerate + alpha value due to different network connections and computer architecture.
 
 #27 Apr 2016 [Working on Pi - Model B+ technically]
 - With the latest Carnivore for ARM, it supports PI now: https://github.com/RSG/Carnivore. Thx to RSG and Gottfried!
