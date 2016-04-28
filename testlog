@@ -2,13 +2,14 @@
 - Firefox addon: https://addons.mozilla.org/en-US/firefox/addon/youtube-enhancer-plus/
 - remove interrupted video ad between videos in a playlist
 - Every time installing the work, it always need to adjust framerate + alpha value due to different network connections and computer architecture.
+>> next action [software]: clear outstanding/queued packets at a certain time
 
 #27 Apr 2016 [Working on Pi - Model B+ technically]
 - With the latest Carnivore for ARM, it supports PI now: https://github.com/RSG/Carnivore. Thx to RSG and Gottfried!
 - make sure it is root access (sudo processing or sudo ./processing > to run processing as root)
 * I also did a tcpdump update in Pi (get update and tcpdump) http://www.ronnutter.com/raspberry-pi-intro-to-tcpdump/
 > other fixes are required: the visual throbber seems a bit distored in PI interface
->> next action: Get the Pi 3 with better CPU power and test again.
+>> next action [hardware]: Get the Pi 3 with better CPU power and test again.
 
 #25 Apr 2016 [doesn't work with Pi because it is not 64-bit- library is not supported] 
 - Install processing in Raspberry Pi Model B+ (https://www.raspberrypi.org/blog/now-available-for-download-processing/)
