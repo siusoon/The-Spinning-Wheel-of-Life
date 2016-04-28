@@ -11,9 +11,11 @@ Carnivore Library: http://r-s-g.org/carnivore
 1/ Settings on mac terminal: first open a Terminal and execute this commmand: sudo chmod 777 /dev/bpf* 
    (must be done each time you reboot your mac)
    
-2/ Turn on Processing and run SpiningWheelofLife
+2/ Install a youtube ad blocker in your firefox: https://addons.mozilla.org/en-US/firefox/addon/youtube-enhancer-plus/
 
-3/ Go to youtube and get a playlist (e.g 8 bits video game music: http://bit.ly/1ppETHQ)
+3/ Firefox> Go to youtube and get a playlist (e.g 8 bits video game music: http://bit.ly/1ppETHQ)
+
+4/ Turn on Processing and run SpiningWheelofLife
 
 #Configurable items
 1/ delay time via "frameRate"
