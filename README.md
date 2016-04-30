@@ -17,8 +17,10 @@ Carnivore Library: http://r-s-g.org/carnivore
 
 4/ Turn on Processing and run SpiningWheelofLife
 
-#Configurable items
-1/ delay time via "frameRate"
+* additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
+
+#Configurable items in the program
+1/ delay time via "frameRate" and "delaytime"
 
 2/ list of ip address that you want to track (youtube currently)
 
