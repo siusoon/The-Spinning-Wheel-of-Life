@@ -1,3 +1,12 @@
+#19 Sep 2016 [Tried Pi 3 Model B > things work on Processing 3.2.1]
+- for AU internet, just use FB login with AU-Guest
+- For new pi installation- do the update first https://www.raspberrypi.org/documentation/raspbian/updating.md
+- Download processing (as I have experienced SSL certificate problem and can't use the function curl or curl -k, I download it via processing.org site. seee: https://www.youtube.com/watch?v=LShej4l2rjM)
+- to run processing, go to the directory (terminal) and type: sudo ./processing  (if error encountered, need to uninstall package by typing: sudo aptitude remove libgles2-mesa)
+- In processing, add library > select Carnivore
+- playlist web page: http://bit.ly/1ppETHQ
+- Download The Spinning-Wheel-of-Life 
+
 #28 Apr 2016 [Tried ad blocking in Youtube successfully]
 - Firefox addon: https://addons.mozilla.org/en-US/firefox/addon/youtube-enhancer-plus/
 - remove interrupted video ad between videos in a playlist
