@@ -1,4 +1,6 @@
 #19 Sep 2016 [Tried Pi 3 Model B > things work on Processing 3.2.1]
+>> work out much better than Pi 2, but still a bit unstable that needs to fix
+steps: 
 - for AU internet, just use FB login with AU-Guest
 - For new pi installation- do the update first https://www.raspberrypi.org/documentation/raspbian/updating.md
 - Download processing (as I have experienced SSL certificate problem and can't use the function curl or curl -k, I download it via processing.org site. seee: https://www.youtube.com/watch?v=LShej4l2rjM)
