@@ -7,7 +7,7 @@ A software is made in processing, constantly listening to a range of IP addresse
 #Credits
 Carnivore Library: http://r-s-g.org/carnivore
 
-#Procedures
+#Procedures on MAC
 1/ Settings on mac terminal: first open a Terminal and execute this commmand: sudo chmod 777 /dev/bpf* 
    (must be done each time you reboot your mac)
    
@@ -17,7 +17,8 @@ Carnivore Library: http://r-s-g.org/carnivore
 
 4/ Turn on Processing and run SpiningWheelofLife
 
-* additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
+#Procedures on Pi
+1/ use 'sudo ./processing' to turn on processing
 
 #Configurable items in the program
 1/ delay time via "frameRate" and "delaytime"
@@ -26,5 +27,8 @@ Carnivore Library: http://r-s-g.org/carnivore
 
 3/ alpha in throbber tab -> the fade in/out speed
 
+* additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
+* 
 #Tested configurations
 - Processing 3.0 + Mac OS 10.10.5
+- Processing 3.2.1 + Pi 3 Model B + Debian_version 8.0
