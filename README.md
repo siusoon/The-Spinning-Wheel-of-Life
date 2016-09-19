@@ -28,7 +28,7 @@ Carnivore Library: http://r-s-g.org/carnivore
 3/ alpha in throbber tab -> the fade in/out speed
 
 * additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
-* 
+
 #Tested configurations
 - Processing 3.0 + Mac OS 10.10.5
 - Processing 3.2.1 + Pi 3 Model B + Debian_version 8.0
