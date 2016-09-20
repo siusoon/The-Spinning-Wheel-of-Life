@@ -1,6 +1,7 @@
 #20 Sep 2016 [Worked with 3.5 audio jack external speaker]
 - type "sudo raspi-config" to force from HDMI to 3.5 audio jack
 - check out screen 7": http://www.waveshare.com/product/7inch-hdmi-lcd-b.htm
+- other source for forcing awake and web browser: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=150080
 
 #19 Sep 2016 [Tried Pi 3 Model B > things work on Processing 3.2.1]
 >> work out much better than Pi 2, but still a bit unstable that needs to fix (in terms of the program, load test, visual part)
