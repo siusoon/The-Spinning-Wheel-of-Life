@@ -1,7 +1,16 @@
+#5 Dec 2016 [Worked with other mini screen]
+- The pi works well with the new Kuman 7" screen: https://www.amazon.co.uk/dp/B01F3K57XG/ref=cfb_at_prodpg
+- recapped few things to fix
+>> block youtube ad
+>> adjust the speed of spinning
+>> Youtube Ips
+>> fix the spinning ellipes (or rethink the design)
+>> laser cut for mounting
+
 #22 Sep 2016 [Worked with mini screen]  
 - The pi works quite well with the 7" screen: https://learn.adafruit.com/adafruit-5-800x480-tft-hdmi-monitor-touchscreen-backpack/overview
 - minor config is need to be done for 800x480 (both processing program and Pi config.txt), see: https://learn.adafruit.com/adafruit-5-800x480-tft-hdmi-monitor-touchscreen-backpack/raspberry-pi-config
->> Youtube can't auto play and stop, susepct is the ad problem. 
+>> Youtube can't auto play and stop, suspecting it is the ad problem. 
 
 #20 Sep 2016 [Worked with 3.5 audio jack external speaker]
 - type "sudo raspi-config" to force from HDMI to 3.5 audio jack
