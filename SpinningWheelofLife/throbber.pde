@@ -12,6 +12,7 @@ class ParticleSystem {
   void run() {
     for (int i = particles.size()-1; i >= 0; i--) {
       Particle p = particles.get(i);
+      println(i);
       p.run();
       if (p.isDead()) {
         particles.remove(i);
@@ -29,52 +30,38 @@ class Particle {
   color colorbuffer;
   PVector calpos;
   PVector location;
-  float alpha;
+  float alpha;  //fading rate
   
   Particle(String tempip, int tempport) {
    
     finalip = tempip;
     finalport = tempport;
-    calpos = new PVector(0,35);   //initial position
+    calpos = new PVector(0,35);   //initial position 
     alpha = 255.0;
     size = 22;
-    colorbuffer = color (240,240,240);
-    
-    //transformation of buffer start (in the form of ellipse)
+    colorbuffer = color (240,240,240);    
     counter++; 
-    println(counter + " packets: " + finalip);    
-    //calculate the position of dots   
-    pushMatrix();
-    translate(width/2, height/2, 0);
-    float cir = 360/9*(counter%9);
-    rotate(radians(cir));
-    float x = modelX(calpos.x, calpos.y, 0);
-    float y = modelY(calpos.x, calpos.y, 0);
-    popMatrix();
-    
-    location = new PVector(x, y);  //where it is
-    
-  }
-  
+    println("***" + counter + " packets: " + finalip);   
+}
   void run() {
     update();
-    display();
-  }
-
-  // Method to update location
-  void update() {
-    alpha -= 10.0;  //quicker to fade out
-  }
-
-  // Method to display
-  void display() {
-    noStroke();
-    fill(colorbuffer,alpha);
-    smooth();
-    ellipse(location.x,location.y,size,size);
-
   }
   
+  // Method to update location
+  void update() {
+    alpha -=5;
+    noStroke();
+    fill(colorbuffer, alpha);
+    smooth();
+    pushMatrix();
+    translate(width/2, height/2);
+    float cir = (360/9)*(counter%9);    
+    rotate(radians(cir));
+    ellipse(calpos.x,calpos.y,size,size);
+    popMatrix();   
+  }
+
+
   // Is the particle still useful?
   boolean isDead() {
     if (alpha < 0.0) {
