@@ -1,9 +1,10 @@
 #5 Dec 2016 [Worked with other mini screen]
 - The pi works well with the new Kuman 7" screen: https://www.amazon.co.uk/dp/B01F3K57XG/ref=cfb_at_prodpg
+- seems fix the spinning issue. The visual is highly distorted by the frameRate. Seemingly, it can't be set lower than 10.
 - recapped few things to fix
->> block youtube ad
->> adjust the speed of spinning
->> Youtube Ips
+>> block youtube ad > update Epiphany > disable ad (preference) > monitor
+>> adjust the speed of spinning > ongoing
+>> Youtube Ips 
 >> fix the spinning ellipes (or rethink the design)
 >> laser cut for mounting
 
