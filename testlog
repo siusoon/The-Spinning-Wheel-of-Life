@@ -1,7 +1,7 @@
 #5 Dec 2016 [Worked with other mini screen]
 - The pi works well with the new Kuman 7" screen: https://www.amazon.co.uk/dp/B01F3K57XG/ref=cfb_at_prodpg
 - seems fix the spinning issue. The visual is highly distorted by the frameRate. Seemingly, it can't be set lower than 10.
-- disable screen blank:sudo nano xxxxxxx >> http://generativeaesthetics.blogspot.dk/search?updated-min=2014-01-01T00:00:00-08:00&updated-max=2015-01-01T00:00:00-08:00&max-results=50
+- disable screen blank:sudo nano xxxxxxx then Re start the file or just reboot >> http://generativeaesthetics.blogspot.dk/search?updated-min=2014-01-01T00:00:00-08:00&updated-max=2015-01-01T00:00:00-08:00&max-results=50
 - recapped few things to fix
 >> block youtube ad > update Epiphany > disable ad (preference) > monitor
 >> adjust the speed of spinning > ongoing
