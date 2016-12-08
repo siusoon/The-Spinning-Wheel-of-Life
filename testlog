@@ -1,3 +1,8 @@
+#8 Dec 2016 [Fixing code]
+- change to check receiver IP than sender IP (assume only proceed for those packet send from others to local)
+- clean up code 
+- swap back to 2D canvas  
+
 #5 Dec 2016 [Worked with other mini screen]
 - The pi works well with the new Kuman 7" screen: https://www.amazon.co.uk/dp/B01F3K57XG/ref=cfb_at_prodpg
 - seems fix the spinning issue. The visual is highly distorted by the frameRate. Seemingly, it can't be set lower than 10.
