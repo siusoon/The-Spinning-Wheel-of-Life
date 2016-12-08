@@ -13,6 +13,7 @@ class ParticleSystem {
     for (int i = particles.size()-1; i >= 0; i--) {
       Particle p = particles.get(i);
       println(i);
+      //checktime();
       p.run();
       if (p.isDead()) {
         particles.remove(i);
@@ -42,6 +43,7 @@ class Particle {
     colorbuffer = color (240,240,240);    
     counter++; 
     println("***" + counter + " packets: " + finalip);   
+    
 }
   void run() {
     update();
@@ -49,7 +51,7 @@ class Particle {
   
   // Method to update location
   void update() {
-    alpha -=5;
+    alpha -=10;
     noStroke();
     fill(colorbuffer, alpha);
     smooth();
@@ -60,7 +62,6 @@ class Particle {
     ellipse(calpos.x,calpos.y,size,size);
     popMatrix();   
   }
-
 
   // Is the particle still useful?
   boolean isDead() {
