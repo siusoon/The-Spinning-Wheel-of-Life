@@ -2,6 +2,7 @@
 - change to check receiver IP than sender IP (assume only proceed for those packet send from others to local)
 - clean up code 
 - swap back to 2D canvas  
+- to solve the loop issue of youtube, try this: https://www.youtube.com/embed?listType=playlist&list=PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun&loop=1&autoplay=1
 
 #5 Dec 2016 [Worked with other mini screen]
 - The pi works well with the new Kuman 7" screen: https://www.amazon.co.uk/dp/B01F3K57XG/ref=cfb_at_prodpg
