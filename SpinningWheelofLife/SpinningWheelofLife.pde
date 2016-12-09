@@ -3,26 +3,29 @@ import org.rsg.carnivore.*;
 import org.rsg.carnivore.net.*;
 import org.rsg.lib.Log;
 
+//https://www.youtube.com/embed?listType=playlist&list=PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun&loop=1&autoplay=1
 int size = 22;
-String selfip = "192.168.1.145";  //check selfip
+//String selfip = "192.168.43.160";  //check selfip
+String selfip = "192.168.1.227";  //check selfip
+
 int counter = 0;
-ParticleSystem ps;
+PacketSystem ps;
 String packets[];
 
 void setup() {
-  background(0,0,0, 80);
-  frameRate(10); //100, max 1000, min 10 
+  background(0);
+  frameRate(100);
   size(400,400);
   //fullScreen(P3D);
-  ps = new ParticleSystem();
-  smooth();
+  ps = new PacketSystem();
   CarnivoreP5 p = new CarnivoreP5(this);
+  smooth();
 }
 
 void draw() {
- fill(0,0,0, 80);
+ fill(0,0,0,30); //set the visual effect - leave trace
  rect(0, 0, width, height); 
- ps.run();
+ ps.go();
 }
 
 synchronized void packetEvent(CarnivorePacket p){
@@ -31,12 +34,12 @@ synchronized void packetEvent(CarnivorePacket p){
     String getip2= getip.substring(1,12); 
     String []m1 = match(selfip,getip2);         
     if (m1 !=null) {
-          ps.addParticle(p.senderAddress.toString(), p.senderPort);    
-          String protocol = p.strTransportProtocol.toString();
+          counter++;
+          ps.addPacket(p.senderAddress.toString(), p.senderPort);    
           println("(" + p.strTransportProtocol + " packet) " + p.dateStamp() + " " + p.senderSocket() + " > " + p.receiverSocket());
           println("Payload: " + p.ascii());
           println("---------------------------\n");
-          delay(200);  //slow down each data packet arrival at the same rate
+          delay(50);  //50-200: slow down each data packet arrival at the same rate > more for visual aesthetics (but during the period no packet will be received because of the use of delay syntax)
     } 
  }
 
