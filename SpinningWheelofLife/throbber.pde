@@ -1,69 +1,69 @@
-class ParticleSystem {
-  ArrayList<Particle> particles;
+class PacketSystem {
+  ArrayList<Packet> packets;
 
-  ParticleSystem() {
-    particles = new ArrayList<Particle>();
+  PacketSystem() {
+    packets = new ArrayList<Packet>();
   }
 
-  void addParticle(String getip, int getport) {
-    particles.add(new Particle(getip, getport));
+  void addPacket(String getip, int getport) {
+    packets.add(new Packet(getip, getport));
   }
 
-  void run() {
-    for (int i = particles.size()-1; i >= 0; i--) {
-      Particle p = particles.get(i);
+  void go() {
+  
+    for (int i = packets.size()-1; i >= 0; i--) {
+      Packet p = packets.get(i); //not much live packets
       println(i);
-      //checktime();
       p.run();
       if (p.isDead()) {
-        particles.remove(i);
+        packets.remove(i);
       }
+    
     }
   }
 }
 
-// A simple Particle class
 
-class Particle {
+class Packet {
   String finalip;
   int finalport;
   int size;
   color colorbuffer;
   PVector calpos;
   PVector location;
+  int getcount;
   float alpha;  //fading rate
   
-  Particle(String tempip, int tempport) {
+  Packet(String tempip, int tempport) {
    
     finalip = tempip;
     finalport = tempport;
     calpos = new PVector(0,35);   //initial position 
-    alpha = 255.0;
+    alpha = 250.0;
     size = 22;
     colorbuffer = color (240,240,240);    
-    counter++; 
+    getcount = counter;
     println("***" + counter + " packets: " + finalip);   
-    
 }
   void run() {
     update();
   }
   
   // Method to update location
-  void update() {
+ void update() {
     alpha -=10;
     noStroke();
     fill(colorbuffer, alpha);
     smooth();
     pushMatrix();
     translate(width/2, height/2);
-    float cir = (360/9)*(counter%9);    
+    float cir = (360/9)*(getcount%9); 
     rotate(radians(cir));
     ellipse(calpos.x,calpos.y,size,size);
     popMatrix();   
   }
 
-  // Is the particle still useful?
+  // Is the packet still useful?
   boolean isDead() {
     if (alpha < 0.0) {
       return true;
