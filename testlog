@@ -1,3 +1,9 @@
+#10 Dec 2016 [Major bug fix]
+- Fix the missing ellipse issue, it was the misuse of variable counter in calulating the radius. 
+- Minor fix on class name from particle system to packet system. It helps for my thinking logic
+- Tried different network conditions e.g home broadband / 4G Lite (mobile). It behaves very differently. It also seems that few parameters need to tune as per the network conidtion to achieve the visual balance
+- The loop issue is not working, and this needs to fix again.
+
 #8 Dec 2016 [Fixing code]
 - change to check receiver IP than sender IP (assume only proceed for those packet send from others to local)
 - clean up code 
