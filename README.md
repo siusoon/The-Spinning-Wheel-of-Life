@@ -45,4 +45,5 @@ lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45X
 - Mobile Internet network 4G (Lite)
 
 *Pi 2 doesn't work - performance issue
+
 *home broadband is not recommended (12.81 Mbps)
