@@ -11,7 +11,7 @@ home broadband: (Download Speed: 13163 kbps (1645.4 KB/sec transfer rate))
 2/ swap memory (need to set up a conj job): swapoff -a && swapon -a
 3/ Simlar to item 1: sudo /sbin/sysctl vm.drop_caches=3
 4/ Setting MTU value (need to test between 1200-1300): sudo ifconfig wlan0 mtu xxxx up
-- cron job detail: http://geeksterminal.com/clear-cache-memory-cronjob-linux/698/
+- cron job detail: http://geeksterminal.com/clear-cache-memory-cronjob-linux/698/ => [every 5 mins] */5****  /root/clearcache.sh
 
 #8 Dec 2016 [Fixing code]
 - change to check receiver IP than sender IP (assume only proceed for those packet send from others to local)
