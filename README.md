@@ -9,13 +9,19 @@ A software is made in processing, constantly listening to a range of IP addresse
 #Credits
 Carnivore Library: http://r-s-g.org/carnivore
 
+#Playlist configuration
+https://www.youtube.com/embed?listType=playlist&list=PLC77007E23FF423C6&loop=1&autoplay=1
+
+the choice of playlist is subjected to the internet speed. If it is relatively slow, it is better to have lightweight playlist. 
+lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45XmnhfkcSeFSuBJ
+
 #Procedures on MAC
 1/ Settings on mac terminal: first open a Terminal and execute this commmand: sudo chmod 777 /dev/bpf* 
    (must be done each time you reboot your mac)
    
 2/ Install a youtube ad blocker in your firefox: https://addons.mozilla.org/en-US/firefox/addon/youtube-enhancer-plus/
 
-3/ Firefox> Go to youtube and get a playlist (e.g 8 bits video game music: http://bit.ly/1ppETHQ)
+3/ go to the playlist 
 
 4/ Turn on Processing and run SpiningWheelofLife
 
@@ -26,6 +32,10 @@ Carnivore Library: http://r-s-g.org/carnivore
 1/ self ip address (use the command 'ifconfig' in Pi)
 
 2/ time configuration: "frameRate", alpha value in void draw > fill,  delaytime on packet arrival, decremental alpha value of throbber's ellipses
+
+3/ block youtube ad > update Epiphany > disable ad (preference) 
+
+4/ go to the playlist
 
 * additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
 
