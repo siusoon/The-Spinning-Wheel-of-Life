@@ -35,7 +35,9 @@ lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45X
 
 3/ block youtube ad > update Epiphany > disable ad (preference) 
 
-4/ go to the playlist
+4/ never accept cookies: Open Web ▸ Preferences ▸ Privacy.
+
+5/ go to the playlist
 
 * additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
 
