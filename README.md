@@ -1,5 +1,7 @@
 # The Spinning Wheel of Life
-The project challenges the perception of a throbber that is usually understood as a transitional object, waiting for content delivers on a screen. By having a music stream that runs in the background, the throbber appears not because of waiting for data arrival, but, instead, it spins as the machine receives data and stores them in a buffer for immediate retrieval. The project asks: By subverting the usual functioning of a throbber, how might we engage with a throbber in a different way? Beyond the negative connotations of waitings, frustrations and annoyance, how might we reflect on a throbber, also known as the spinning wheel of death, that has become a cultural object and used commonly in contemporary software culture? 
+The project explores the micro-temporality of data streams by speculating a notable cultural icon. Instead of having an animated gif, A throbber is redesigned with which it spins as the machine receives data and stores them in a buffer for immediate retrieval. It yeilds an usual and unstable spinning which is subject to the live networked condition.  
+
+(Beyond the negative connotations of waitings, frustrations and annoyance, how might we reflect on a throbber, also known as the spinning wheel of death, that has become a cultural object and used commonly in contemporary software culture?)
 
 # How it works
 A software is made in processing, constantly listening to a range of IP addresses in real-time. Each display of an ellipse is subjected to network packet arrival. A series of the ellipse will form a noticeable and animated icon - throbber. 
@@ -21,11 +23,9 @@ Carnivore Library: http://r-s-g.org/carnivore
 1/ use 'sudo ./processing' to turn on processing
 
 #Configurable items in the program
-1/ delay time via "frameRate" and "delaytime"
+1/ self ip address (use the command 'ifconfig' in Pi)
 
-2/ list of ip address that you want to track (youtube currently)
-
-3/ alpha in throbber tab -> the fade in/out speed
+2/ time configuration: "frameRate", alpha value in void draw > fill,  delaytime on packet arrival, decremental alpha value of throbber's ellipses
 
 * additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
 
