@@ -2,7 +2,10 @@
 - Fix the missing ellipse issue, it was the misuse of variable counter in calulating the radius. 
 - Minor fix on class name from particle system to packet system. It helps for my thinking logic
 - Tried different network conditions e.g home broadband / 4G Lite (mobile). It behaves very differently. It also seems that few parameters need to tune as per the network conidtion to achieve the visual balance
-- The loop issue is not working, and this needs to fix again.
+mobile: (Download Speed: 17939 kbps (2242.4 KB/sec transfer rate))
+home broadband: (Download Speed: 13163 kbps (1645.4 KB/sec transfer rate))
+- [important discovery] Setting the MTU value helps in changing the no of packet delivery (command: sudo ifconfig eth0 mtu 1200 up)
+- The video loop issue is not working, and this needs to fix again.
 
 #8 Dec 2016 [Fixing code]
 - change to check receiver IP than sender IP (assume only proceed for those packet send from others to local)
