@@ -42,5 +42,7 @@ lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45X
 #Tested configurations
 - Processing 3.0 + Mac OS 10.10.5
 - Processing 3.2.1 + Pi 3 Model B + Debian_version 8.0
+- Mobile Internet network 4G (Lite)
 
 *Pi 2 doesn't work - performance issue
+*home broadband is not recommended (12.81 Mbps)
