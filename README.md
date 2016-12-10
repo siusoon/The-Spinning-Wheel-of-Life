@@ -1,4 +1,4 @@
-# The Spinning Wheel of Life
+# The Spinning Wheel of Life (still work-in-progress)
 The project explores the micro-temporality of data streams by speculating a notable cultural icon. Instead of having an animated gif, A throbber is redesigned with which it spins as the machine receives data and stores them in a buffer for immediate retrieval. It yields an unusual and unstable spinning which is subject to the live networked condition.
 
 (Beyond the negative connotations of waitings, frustrations and annoyance, how might we reflect on a throbber, also known as the spinning wheel of death, that has become a cultural object and used commonly in contemporary software culture?)
