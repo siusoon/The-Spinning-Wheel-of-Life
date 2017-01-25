@@ -4,7 +4,7 @@ import org.rsg.carnivore.net.*;
 import org.rsg.lib.Log;
 
 //cat video: https://www.youtube.com/embed?listType=playlist&list=PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun&loop=1&autoplay=1
-//8 bit video: https://www.youtube.com/playlist?list=PLk6nqLYChSfFhLiaf45XmnhfkcSeFSuBJ&loop=1&autoplay=1
+//8 bit video: https://www.youtube.com/watch?v=zTo_YTUtDSk&list=PLk6nqLYChSfFhLiaf45XmnhfkcSeFSuBJ&loop=1&autoplay=1
 int size = 22;
 //String selfip = "192.168.43.160";  //check selfip
 String selfip = "192.168.1.227";  //check selfip
