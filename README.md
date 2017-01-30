@@ -10,9 +10,9 @@ A software is made in processing, constantly listening to a range of IP addresse
 Carnivore Library: http://r-s-g.org/carnivore
 
 #Playlist configuration
-https://www.youtube.com/embed?listType=playlist&list=PLC77007E23FF423C6&loop=1&autoplay=1
-
-the choice of playlist is subjected to the internet speed. If it is relatively slow, it is better to have lightweight playlist. 
+http://siusoon.github.io/The-Spinning-Wheel-of-Life/webloop.html
+*An html that set the playlist with loop and autoplay.
+*the choice of playlist is subjected to the internet speed. If it is relatively slow, it is better to have lightweight playlist. 
 lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45XmnhfkcSeFSuBJ
 
 #Procedures on MAC
@@ -26,7 +26,7 @@ lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45X
 4/ Turn on Processing and run SpiningWheelofLife
 
 #Procedures on Pi
-1/ use 'sudo ./processing' to turn on processing
+1/ use 'sudo processing' to turn on processing
 
 #Configurable items in the program
 1/ self ip address (use the command 'ifconfig' in Pi)
@@ -38,6 +38,8 @@ lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45X
 4/ never accept cookies: Open Web ▸ Preferences ▸ Privacy.
 
 5/ go to the playlist
+
+6/ MTU settings to adjust packets size 'sudo ifconfig eth0 mtu 1200 up'  (between 1200-1500)
 
 * additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
 
