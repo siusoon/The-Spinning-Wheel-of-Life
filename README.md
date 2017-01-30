@@ -10,7 +10,7 @@ A software is made in processing, constantly listening to a range of IP addresse
 Carnivore Library: http://r-s-g.org/carnivore
 
 #Playlist configuration
-http://siusoon.github.io/The-Spinning-Wheel-of-Life/webloop.html
+http://siusoon.github.io/The-Spinning-Wheel-of-Life/webloop.html <br>
 *An html that set the playlist with loop and autoplay.
 *the choice of playlist is subjected to the internet speed. If it is relatively slow, it is better to have lightweight playlist. 
 lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45XmnhfkcSeFSuBJ
@@ -23,7 +23,7 @@ lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45X
 
 3/ go to the playlist 
 
-4/ Turn on Processing and run SpiningWheelofLife
+4/ Turn on Processing and run Spining Wheel of Life
 
 #Procedures on Pi
 1/ use 'sudo processing' to turn on processing
@@ -39,7 +39,7 @@ lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45X
 
 5/ go to the playlist
 
-6/ MTU settings to adjust packets size 'sudo ifconfig eth0 mtu 1200 up'  (between 1200-1500)
+6/ MTU settings to adjust packets size 'sudo ifconfig eth0 mtu 1200 up' (between 1200-1500)
 
 * additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
 
