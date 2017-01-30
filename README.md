@@ -41,7 +41,7 @@ lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45X
 
 6/ MTU settings to adjust packets size 'sudo ifconfig eth0 mtu 1200 up' (between 1200-1500)
 
-* additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
+*additional configuration might be required for "delaytime", "frameRate" and "alpha", because the program behaves differently with a different machine and site. 
 
 #Tested configurations
 - Processing 3.0 + Mac OS 10.10.5
