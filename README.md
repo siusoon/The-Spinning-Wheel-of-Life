@@ -11,7 +11,7 @@ Carnivore Library: http://r-s-g.org/carnivore
 
 #Playlist configuration
 http://siusoon.github.io/The-Spinning-Wheel-of-Life/webloop.html <br>
-*An html that set the playlist with loop and autoplay.
+*An html that set the playlist with loop and autoplay parameters.
 *the choice of playlist is subjected to the internet speed. If it is relatively slow, it is better to have lightweight playlist. 
 lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45XmnhfkcSeFSuBJ
 
