@@ -36,14 +36,14 @@ class Packet {
   
   Packet(String tempip, int tempport) {
    
-    finalip = tempip;
-    finalport = tempport;
-    calpos = new PVector(0,35);   //initial position 
-    alpha = 250.0;
-    size = 22;
-    colorbuffer = color (240,240,240);    
-    getcount = counter;
-    println("***" + counter + " packets: " + finalip);   
+    this.finalip = tempip;
+    this.finalport = tempport;
+    this.calpos = new PVector(0,35);   //initial position 
+    this.alpha = 250.0;
+    this.size = 22;
+    this.colorbuffer = color (240,240,240);    
+    this.getcount = counter;
+    println("***" + counter + " packets: " + this.finalip);   
 }
   void run() {
     update();
