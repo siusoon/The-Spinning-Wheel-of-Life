@@ -7,7 +7,9 @@ import org.rsg.lib.Log;
 //8 bit video: https://www.youtube.com/watch?v=zTo_YTUtDSk&list=PLk6nqLYChSfFhLiaf45XmnhfkcSeFSuBJ&loop=1&autoplay=1
 int size = 22;
 //String selfip = "192.168.43.160";  //check selfip
-String selfip = "192.168.1.227";  //check selfip
+String selfip = "10.143.244.67";  //check selfip
+String [] targetip= {"64.18.0.0", "64.233.160.0", "66.102.0.0","66.249.80.0","72.14.192.0","74.125.0.0", "173.194.0.0","207.126.144.0", "209.85.128.0", "216.58.208.0", "216.58.212.142", "216.239.32.0", "216.58.197.97"};  //youtube ips range
+//private addr list: http://www.ip-tracker.org/locator/ip-lookup.php?ip=172.30.8.132
 
 int counter = 0;
 PacketSystem ps;
@@ -15,7 +17,7 @@ String packets[];
 
 void setup() {
   background(0);
-  frameRate(100);
+  frameRate(800);
   size(400,400);
   //fullScreen(P3D);
   ps = new PacketSystem();
@@ -33,14 +35,26 @@ synchronized void packetEvent(CarnivorePacket p){
   
     String getip = p.receiverAddress.ip.toString();
     String getip2= getip.substring(1,12); 
-    String []m1 = match(selfip,getip2);         
-    if (m1 !=null) {
+    String []m1 = match(selfip,getip2);  //send from outside to local
+    String senderip = p.senderAddress.ip.toString();
+    String senderip2= senderip.substring(1,10); 
+    boolean senderipcheck = false;
+    for (int i = 0; i < targetip.length; i++) {
+       String selectedip = targetip[i].substring(0,5);
+       String []m2 = match(senderip2,selectedip);       
+       if (m2 !=null) {  //with match
+         senderipcheck = false;
+       } else {
+         senderipcheck = true;
+       } 
+    }
+   if ((m1 !=null) && (senderipcheck)) {
           counter++;
           ps.addPacket(p.senderAddress.toString(), p.senderPort);    
           println("(" + p.strTransportProtocol + " packet) " + p.dateStamp() + " " + p.senderSocket() + " > " + p.receiverSocket());
-          println("Payload: " + p.ascii());
-          println("---------------------------\n");
-          delay(50);  //50-200: slow down each data packet arrival at the same rate > more for visual aesthetics (but during the period no packet will be received because of the use of delay syntax)
+          //println("Payload: " + p.ascii());
+          delay(15);  //50-200: slow down each data packet arrival at the same rate > more for visual aesthetics (but during the period no packet will be received because of the use of delay syntax)
+
     } 
  }
 
