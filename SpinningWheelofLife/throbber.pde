@@ -9,7 +9,7 @@ class PacketSystem {
     packets.add(new Packet(getip, getport));
   }
 
-  void go() {
+  synchronized void go() {
   
     for (int i = packets.size()-1; i >= 0; i--) {
       Packet p = packets.get(i); //not much live packets
@@ -43,15 +43,15 @@ class Packet {
     this.size = 22;
     this.colorbuffer = color (240,240,240);    
     this.getcount = counter;
-    println("***" + counter + " packets: " + this.finalip);   
+    println("***" + counter + " packets: " + finalip);   
 }
-  void run() {
+  synchronized void run() {
     update();
   }
   
   // Method to update location
- void update() {
-    alpha -=10;
+ synchronized void update() {
+    alpha -=8;
     noStroke();
     fill(colorbuffer, alpha);
     smooth();
