@@ -48,12 +48,13 @@ synchronized void packetEvent(CarnivorePacket p){
          senderipcheck = true;
        } 
     }
-   if ((m1 !=null) && (senderipcheck)) {
+   int addpacket = int(random(2));  //there is random element added with the objective to not to take all the packets
+   if ((m1 !=null) && (senderipcheck) && (addpacket ==1)) {   
           counter++;
           ps.addPacket(p.senderAddress.toString(), p.senderPort);    
           println("(" + p.strTransportProtocol + " packet) " + p.dateStamp() + " " + p.senderSocket() + " > " + p.receiverSocket());
           //println("Payload: " + p.ascii());
-          delay(15);  //50-200: slow down each data packet arrival at the same rate > more for visual aesthetics (but during the period no packet will be received because of the use of delay syntax)
+          delay(25); //between 10-60, it will impact how to display the ellipses. Big value will cause the packets contain a long queue and takes a long time to finish displaying the packets. Small value will allow all ellipses appear at the same time because packets arrive almost the same interval.
 
     } 
  }
