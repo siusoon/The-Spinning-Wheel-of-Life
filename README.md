@@ -10,7 +10,7 @@ A software is made in processing, constantly listening to a range of IP addresse
 Carnivore Library: http://r-s-g.org/carnivore
 
 #Playlist configuration
-http://siusoon.github.io/The-Spinning-Wheel-of-Life/webloop.html <br>
+http://siusoon.net/thespinningwheeloflife/ <br>
 *An html that set the playlist with loop and autoplay parameters.
 *the choice of playlist is subjected to the internet speed. If it is relatively slow, it is better to have lightweight playlist. 
 lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45XmnhfkcSeFSuBJ
@@ -33,11 +33,11 @@ lightweight Example: PLk6nqLYChSfG7N0kUWyKq_zraDMrWCDun  or Lk6nqLYChSfFhLiaf45X
 
 2/ time configuration: "frameRate", alpha value in void draw > fill,  delaytime on packet arrival, decremental alpha value of throbber's ellipses
 
-3/ block youtube ad > update Epiphany > disable ad (preference) 
+3/ block youtube ad > update Epiphany > disable ad (preference) or use Midori (check preference > cache and extension too)
 
 4/ never accept cookies: Open Web ▸ Preferences ▸ Privacy.
 
-5/ go to the playlist
+5/ go to the playlist > choose the low resolution one
 
 6/ MTU settings to adjust packets size 'sudo ifconfig eth0 mtu 1200 up' (between 1200-1500)
 
