@@ -46,20 +46,20 @@ class Packet {
     println("***" + counter + " packets: " + finalip);   
 }
   synchronized void run() {
-    update();
+    this.update();
   }
   
   // Method to update location
  synchronized void update() {
-    alpha -=8;
+    this.alpha -=8;
     noStroke();
-    fill(colorbuffer, alpha);
+    fill(this.colorbuffer, this.alpha);
     smooth();
     pushMatrix();
     translate(width/2, height/2);
-    float cir = (360/9)*(getcount%9); 
+    float cir = (360/9)*(this.getcount%9); 
     rotate(radians(cir));
-    ellipse(calpos.x,calpos.y,size,size);
+    ellipse(this.calpos.x,this.calpos.y,this.size,this.size);
     popMatrix();   
   }
 
