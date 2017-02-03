@@ -1,4 +1,3 @@
-import java.util.Iterator;
 import org.rsg.carnivore.*;
 import org.rsg.carnivore.net.*;
 import org.rsg.lib.Log;
@@ -10,10 +9,19 @@ int size = 22;
 String selfip = "10.143.244.172";  //check selfip
 String [] targetip= {"64.18.0.0", "64.233.160.0", "66.102.0.0","66.249.80.0","72.14.192.0","74.125.0.0", "173.194.0.0","207.126.144.0", "209.85.128.0", "216.58.208.0", "216.58.212.142", "216.239.32.0", "216.58.197.97"};  //youtube ips range
 //private addr list: http://www.ip-tracker.org/locator/ip-lookup.php?ip=172.30.8.132
-
+String[] m2;
 int counter = 0;
 PacketSystem ps;
 String packets[];
+//ip related
+String getip;
+String senderip;
+boolean senderipcheck;
+String selectedip ;
+int addpacket;
+//time related
+float m;
+float h;
 
 void setup() {
   background(0);
@@ -32,39 +40,35 @@ void draw() {
 }
 
 synchronized void packetEvent(CarnivorePacket p){
-  
-    String getip = p.receiverAddress.ip.toString();
-    if (getip.length()-1 == selfip.length()) {
-      String getip2= getip.substring(1,12); 
-      String[] m1 = match(selfip,getip2);  //send from outside to local
-      String senderip = p.senderAddress.ip.toString();
-      String senderip2= senderip.substring(1,10); 
-      boolean senderipcheck = false;
+    getip = p.receiverAddress.ip.toString();
+    if (selfip.equals(getip.substring(1, selfip.length()+1)) == true) {     
+      senderip = p.senderAddress.ip.toString();
+      senderipcheck = false;
       for (int i = 0; i < targetip.length; i++) {
-         String selectedip = targetip[i].substring(0,5);
-         String[] m2 = match(senderip2,selectedip);       
+         selectedip = targetip[i].substring(0,5);
+         m2 = match(senderip,selectedip);       
          if (m2 !=null) {  //with match
-           senderipcheck = false;
+           senderipcheck = false;           
+           m2 = null;
          } else {
            senderipcheck = true;
          } 
       }
-    int addpacket= int(random(2));
-       if ((m1 !=null) && (senderipcheck) && (addpacket==1)) {
+     addpacket= int(random(2));
+       if ((senderipcheck) && (addpacket==1)) {
           counter++;
           ps.addPacket(p.senderAddress.toString(), p.senderPort);    
           println("(" + p.strTransportProtocol + " packet) " + p.dateStamp() + " " + p.senderSocket() + " > " + p.receiverSocket());
           //println("Payload: " + p.ascii());
           delay(25);  //50-200: slow down each data packet arrival at the same rate > more for visual aesthetics (but during the period no packet will be received because of the use of delay syntax)
-
        }
-    }
-     
+    
  }
+}
 
 void checktime() { //for debug purpose
- float m = minute();
- float h = hour();
+  m = minute();
+  h = hour();
  println("Time " + h + ":" + m);
 }
 
