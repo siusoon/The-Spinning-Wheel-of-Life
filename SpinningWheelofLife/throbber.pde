@@ -14,10 +14,15 @@ class PacketSystem {
     for (int i = packets.size()-1; i >= 0; i--) {
       Packet p = packets.get(i); //not much live packets
       println(i);
-      p.run();
-      if (p.isDead()) {
+      try {
+        p.run();
+        if (p.isDead()) {
         packets.remove(i);
+        }
+      } catch(Exception e) {
+        e.printStackTrace();        
       }
+    
     
     }
   }
@@ -51,7 +56,7 @@ class Packet {
   
   // Method to update location
  synchronized void update() {
-    this.alpha -=8;
+    this.alpha -=15;
     noStroke();
     fill(this.colorbuffer, this.alpha);
     smooth();
