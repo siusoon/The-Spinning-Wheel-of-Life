@@ -9,14 +9,14 @@ class PacketSystem {
     packets.add(new Packet(getip, getport));
   }
 
-  synchronized void go() {
+ synchronized void go() {
   
     for (int i = packets.size()-1; i >= 0; i--) {
-      Packet p = packets.get(i); //not much live packets
-      println(i);
+      Packet a = packets.get(i); //not much live packets
+      println(packets.size());
       try {
-        p.run();
-        if (p.isDead()) {
+        a.run();
+        if (a.isDead()) {
         packets.remove(i);
         }
       } catch(Exception e) {
