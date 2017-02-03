@@ -7,7 +7,7 @@ import org.rsg.lib.Log;
 //8 bit video: https://www.youtube.com/watch?v=zTo_YTUtDSk&list=PLk6nqLYChSfFhLiaf45XmnhfkcSeFSuBJ&loop=1&autoplay=1
 int size = 22;
 //String selfip = "192.168.43.160";  //check selfip
-String selfip = "10.143.244.67";  //check selfip
+String selfip = "10.143.244.172";  //check selfip
 String [] targetip= {"64.18.0.0", "64.233.160.0", "66.102.0.0","66.249.80.0","72.14.192.0","74.125.0.0", "173.194.0.0","207.126.144.0", "209.85.128.0", "216.58.208.0", "216.58.212.142", "216.239.32.0", "216.58.197.97"};  //youtube ips range
 //private addr list: http://www.ip-tracker.org/locator/ip-lookup.php?ip=172.30.8.132
 
@@ -17,7 +17,7 @@ String packets[];
 
 void setup() {
   background(0);
-  frameRate(800);
+  frameRate(50);
   size(400,400);
   //fullScreen(P3D);
   ps = new PacketSystem();
@@ -34,29 +34,32 @@ void draw() {
 synchronized void packetEvent(CarnivorePacket p){
   
     String getip = p.receiverAddress.ip.toString();
-    String getip2= getip.substring(1,12); 
-    String []m1 = match(selfip,getip2);  //send from outside to local
-    String senderip = p.senderAddress.ip.toString();
-    String senderip2= senderip.substring(1,10); 
-    boolean senderipcheck = false;
-    for (int i = 0; i < targetip.length; i++) {
-       String selectedip = targetip[i].substring(0,5);
-       String []m2 = match(senderip2,selectedip);       
-       if (m2 !=null) {  //with match
-         senderipcheck = false;
-       } else {
-         senderipcheck = true;
-       } 
-    }
-   int addpacket = int(random(2));  //there is random element added with the objective to not to take all the packets
-   if ((m1 !=null) && (senderipcheck) && (addpacket ==1)) {   
+    if (getip.length()-1 == selfip.length()) {
+      String getip2= getip.substring(1,12); 
+      String[] m1 = match(selfip,getip2);  //send from outside to local
+      String senderip = p.senderAddress.ip.toString();
+      String senderip2= senderip.substring(1,10); 
+      boolean senderipcheck = false;
+      for (int i = 0; i < targetip.length; i++) {
+         String selectedip = targetip[i].substring(0,5);
+         String[] m2 = match(senderip2,selectedip);       
+         if (m2 !=null) {  //with match
+           senderipcheck = false;
+         } else {
+           senderipcheck = true;
+         } 
+      }
+    int addpacket= int(random(2));
+       if ((m1 !=null) && (senderipcheck) && (addpacket==1)) {
           counter++;
           ps.addPacket(p.senderAddress.toString(), p.senderPort);    
           println("(" + p.strTransportProtocol + " packet) " + p.dateStamp() + " " + p.senderSocket() + " > " + p.receiverSocket());
           //println("Payload: " + p.ascii());
-          delay(25); //between 10-60, it will impact how to display the ellipses. Big value will cause the packets contain a long queue and takes a long time to finish displaying the packets. Small value will allow all ellipses appear at the same time because packets arrive almost the same interval.
+          delay(25);  //50-200: slow down each data packet arrival at the same rate > more for visual aesthetics (but during the period no packet will be received because of the use of delay syntax)
 
-    } 
+       }
+    }
+     
  }
 
 void checktime() { //for debug purpose
@@ -65,6 +68,8 @@ void checktime() { //for debug purpose
  println("Time " + h + ":" + m);
 }
 
+/*
 void keyPressed() {
  saveFrame(); 
 }
+*/
