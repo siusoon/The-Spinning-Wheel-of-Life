@@ -1,8 +1,9 @@
 # The Spinning Wheel of Life (still work-in-progress)
-The project explores the micro-temporality of data streams by speculating a notable cultural icon. Instead of having an animated gif, A throbber is redesigned with which it spins as the machine receives data and stores them in a buffer for immediate retrieval. It yields an unusual and unstable spinning which is subject to the live networked condition.
 
-(Beyond the negative connotations of waitings, frustrations and annoyance, how might we reflect on a throbber, also known as the spinning wheel of death, that has become a cultural object and used commonly in contemporary software culture?)
+The Spinning Wheel of Life, with a running throbber, responses to technological networks, data transmission and material substrates in real time. The visual cultural icon represnts the nature of the Internet which is something not very stable, with ruptures, gaps and glitches, as part of the digital culture fundamentally. 
 
+While a throbber may convey a negative connotation with the need of waiting for an unknowable time. The time may be considered as unproductive or as a waste of time. Instead of having an animated gif, a throbber is redesigned with which it spins as the machine receives data and stores them in a buffer for immediate retrieval, resulting in an unusual spinning, beyond what the term "throb" is denoted. From the microscopic time interval of digital signal processing to the planetary scale of data capitalization, the piece invites for a speculation of this cultural icon beyond the slowness of network and explores the micro-temporality of streams.
+ 
 # How it works
 A software is made in processing, constantly listening to a range of IP addresses in real-time. Each display of an ellipse is subjected to network packet arrival. A series of the ellipse will form a noticeable and animated icon - throbber. 
 
